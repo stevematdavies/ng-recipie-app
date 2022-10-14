@@ -1,6 +1,14 @@
-<ul>
-  <li><app-recipe-list-item></app-recipe-list-item></li>
-  <li><app-recipe-list-item></app-recipe-list-item></li>
-  <li><app-recipe-list-item></app-recipe-list-item></li>
-  <li><app-recipe-list-item></app-recipe-list-item></li>
-</ul>
+<div class="row">
+  <div class="col-xs-12">
+     <button class="btn btn-success">
+       Add a Recipe
+     </button>
+  </div>
+</div>
+
+
+<div class="row" *ngFor="let recipe of recipes">
+  <div class="col-xs-12">
+      <app-recipe-list-item [recipe]="recipe"></app-recipe-list-item>
+  </div>
+</div>
