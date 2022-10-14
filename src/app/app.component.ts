@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {View} from "./models/tyypes";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  currentView: View = "RECIPES";
+
+  onViewSwitched(v: View){
+    this.currentView = v
+  }
 }
