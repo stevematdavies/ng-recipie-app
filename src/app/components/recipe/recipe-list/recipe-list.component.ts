@@ -15,6 +15,7 @@ export class RecipeListComponent implements OnInit {
       'https://bakesbybrownsugar.com/wp-content/uploads/2022/08/Apricot-Tart-28.jpg')
   ];
 
+
   constructor() { }
 
   ngOnInit(): void {
