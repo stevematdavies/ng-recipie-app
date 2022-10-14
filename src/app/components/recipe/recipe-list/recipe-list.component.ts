@@ -8,13 +8,23 @@ import {Recipe} from "../../../models/recipe.model";
 })
 export class RecipeListComponent implements OnInit {
 
+  defaultImagePath: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bowl-whip.svg/512px-Bowl-whip.svg.png?20200325120803';
+
   recipes: Array<Recipe> = [
     new Recipe(
       'A Test Recipe',
-      'this is a test',
-      'https://bakesbybrownsugar.com/wp-content/uploads/2022/08/Apricot-Tart-28.jpg')
+      'This is a test',
+      this.defaultImagePath),
+
+    new Recipe(
+      'Another test Recipe',
+      'Yum yum',
+      this.defaultImagePath)
   ];
 
+  onAddRecipe(){
+    console.log('#adding recipe')
+  }
 
   constructor() { }
 

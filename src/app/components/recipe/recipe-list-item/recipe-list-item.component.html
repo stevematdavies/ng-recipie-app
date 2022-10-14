@@ -1,15 +1,12 @@
-<div class="mt-4 mb-4">
-  <a href="">
-    <div class="card pull-left rounded shadow-sm">
-      <img class="card-img-top mh-100" [src]="recipe?.imagePath" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{recipe?.name}}</h5>
-        <p class="card-text">{{recipe?.description}}</p>
-        <a href="#" class="btn btn-primary">
-          <i class="bi bi-info-circle-fill"></i> details
-        </a>
-      </div>
+<div class="mb-4 list-group-item shadow rounded clearfix">
+  <div class="row p-lg-4">
+    <div class="col-8">
+      <h4>{{recipe!.name}}</h4>
+      <h6>{{recipe!.description}}</h6>
     </div>
-  </a>
+    <div class="col-4 mr-auto">
+      <img [src]="recipe!.imagePath" [alt]="recipe!.name" style="max-height: 50px" />
+    </div>
+  </div>
 </div>
 
