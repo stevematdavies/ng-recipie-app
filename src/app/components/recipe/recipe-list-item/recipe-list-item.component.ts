@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Recipe} from "../../../models/recipe.model";
+import {iterator} from "rxjs/internal/symbol/iterator";
 
 @Component({
   selector: 'app-recipe-list-item',
@@ -8,4 +9,9 @@ import {Recipe} from "../../../models/recipe.model";
 })
 export class RecipeListItemComponent {
   @Input() recipe: Recipe | null = null;
+  @Output('recipeSelected') recipeSelectedEmitter: EventEmitter<Recipe> = new EventEmitter<Recipe>()
+
+  onRecipeItemSelected(r: Recipe){
+    this.recipeSelectedEmitter.emit(r)
+  }
 }

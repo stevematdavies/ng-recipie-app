@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Recipe} from "../../../models/recipe.model";
 
 @Component({
@@ -9,7 +9,7 @@ import {Recipe} from "../../../models/recipe.model";
 export class RecipeListComponent implements OnInit {
 
   defaultImagePath: string = 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bowl-whip.svg/512px-Bowl-whip.svg.png?20200325120803';
-
+  @Output('recipeSelected') recipeSelectedEmitter: EventEmitter<Recipe> = new EventEmitter<Recipe>()
   recipes: Array<Recipe> = [
     new Recipe(
       'A Test Recipe',
@@ -24,6 +24,10 @@ export class RecipeListComponent implements OnInit {
 
   onAddRecipe(){
     console.log('#adding recipe')
+  }
+
+  onRecipeSelected(r: Recipe){
+   this.recipeSelectedEmitter.emit(r)
   }
 
   constructor() { }
