@@ -2,6 +2,13 @@
   <div class="col-xs-10">
     <app-shopping-list-edit></app-shopping-list-edit>
     <hr>
-    <p>The recipe List</p>
+      <ul class="list-group" *ngFor="let ingredient of ingredients">
+        <a href="#" class="list-group-item list-group-item-action mb-2 shadow-sm">
+          <div class="d-flex w-100 justify-content-between">
+            <h6 class="mb-1">{{ingredient.name}}</h6>
+            <span class="badge badge-info">{{ingredient.amount}}</span>
+          </div>
+        </a>
+      </ul>
+    </div>
   </div>
-</div>
