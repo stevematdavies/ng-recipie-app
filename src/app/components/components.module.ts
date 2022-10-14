@@ -7,6 +7,7 @@ import {ShoppingListEditComponent} from "./shopping/shopping-list-edit/shopping-
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 import {FormsModule} from "@angular/forms";
+import { RecipesComponent } from './recipe/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {FormsModule} from "@angular/forms";
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListEditComponent,
+    RecipesComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import {FormsModule} from "@angular/forms";
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListEditComponent,
+    RecipesComponent,
   ],
   providers: [],
   bootstrap: []

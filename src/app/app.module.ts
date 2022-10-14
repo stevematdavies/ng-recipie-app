@@ -6,7 +6,9 @@ import {ComponentsModule} from "./components/components.module";
 import {LayoutModule} from "./layout/layout.module";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     LayoutModule,
     ComponentsModule,
