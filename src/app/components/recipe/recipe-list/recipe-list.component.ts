@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Recipe} from "../../../models/recipe.model";
+import {Ingredient} from "../../../models/ingredient.model";
 
 @Component({
   selector: 'app-recipe-list',
@@ -14,12 +15,20 @@ export class RecipeListComponent implements OnInit {
     new Recipe(
       'A Test Recipe',
       'This is a test',
-      this.defaultImagePath),
+      this.defaultImagePath,
+      [
+        new Ingredient('Bread',1),
+        new Ingredient('Soup',1)
+    ]),
 
     new Recipe(
       'Another test Recipe',
       'Yum yum',
-      this.defaultImagePath)
+      this.defaultImagePath,
+      [
+        new Ingredient('Apples',10),
+        new Ingredient('Oranges',5)
+      ])
   ];
 
   onAddRecipe(){
