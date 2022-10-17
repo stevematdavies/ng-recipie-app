@@ -10,6 +10,8 @@ export class AppComponent {
 
   currentView: View = "RECIPES";
 
+  testFlag = false;
+
   onViewSwitched(v: View){
     this.currentView = v
   }

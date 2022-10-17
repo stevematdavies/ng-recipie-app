@@ -3,12 +3,8 @@
 <div class="container pt-4">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="currentView === 'RECIPES'"></app-recipes>
-      <app-shopping-list *ngIf="currentView === 'SHOPPING'"></app-shopping-list>
+        <app-recipes *appUnless="currentView !== 'RECIPES'" ></app-recipes>
+        <app-shopping-list *appUnless="currentView !== 'SHOPPING'"></app-shopping-list>
     </div>
   </div>
-  <p appHighlight>A test area for directives</p>
-  <p appHighlightV2
-     [defaultHighlightBgColor]="'yellow'"
-     [defaultHighlightFontColor]="'orange'">A test area for directives</p>
 </div>
