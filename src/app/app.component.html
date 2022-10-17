@@ -7,4 +7,8 @@
       <app-shopping-list *ngIf="currentView === 'SHOPPING'"></app-shopping-list>
     </div>
   </div>
+  <p appHighlight>A test area for directives</p>
+  <p appHighlightV2
+     [defaultHighlightBgColor]="'yellow'"
+     [defaultHighlightFontColor]="'orange'">A test area for directives</p>
 </div>
