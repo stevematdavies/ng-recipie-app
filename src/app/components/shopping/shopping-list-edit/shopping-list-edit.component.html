@@ -1,22 +1,19 @@
 <form>
   <div class="form-row">
     <div class="col-4">
-      <input type="text" id="name" class="form-control" placeholder="item name">
+      <input type="text" id="name" class="form-control" placeholder="item name" #nameInput>
     </div>
 
     <div class="col-3">
-      <input type="number" id="amount" class="form-control" placeholder="quantity">
+      <input type="number" id="amount" class="form-control" placeholder="quantity" #amountInput>
     </div>
 
     <div class="col-4">
-      <a class="btn" type="submit" href="#" title="add item">
+      <a class="btn" type="submit" href="#" title="add item" (click)="onAddItem()">
         <i class="bi bi-bag-plus"></i>
       </a>
       <a class="btn" href="#" title="clear form">
         <i class="bi bi-x-circle"></i>
-      </a>
-      <a class="btn" href="#" title="delete item">
-        <i class="bi bi-trash"></i>
       </a>
     </div>
 

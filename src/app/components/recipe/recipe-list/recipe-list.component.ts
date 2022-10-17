@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Recipe} from "../../../models/recipe.model";
 import {Ingredient} from "../../../models/ingredient.model";
+import * as uuid from 'uuid'
 
 @Component({
   selector: 'app-recipe-list',
@@ -17,8 +18,8 @@ export class RecipeListComponent implements OnInit {
       'This is a test',
       this.defaultImagePath,
       [
-        new Ingredient('Bread',1),
-        new Ingredient('Soup',1)
+        new Ingredient('Bread',1, uuid.v4()),
+        new Ingredient('Soup',1, uuid.v4())
     ]),
 
     new Recipe(
@@ -26,8 +27,8 @@ export class RecipeListComponent implements OnInit {
       'Yum yum',
       this.defaultImagePath,
       [
-        new Ingredient('Apples',10),
-        new Ingredient('Oranges',5)
+        new Ingredient('Apples',10,uuid.v4()),
+        new Ingredient('Oranges',5,uuid.v4())
       ])
   ];
 
