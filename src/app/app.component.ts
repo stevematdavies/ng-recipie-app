@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {View} from "./models/tyypes";
+import {LoggingService} from "./services/logging.service";
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,11 @@ export class AppComponent {
 
   currentView: View = "RECIPES";
 
-  testFlag = false;
+  constructor(private logger: LoggingService) {
+  }
 
   onViewSwitched(v: View){
+    this.logger.log.D('Switching view')
     this.currentView = v
   }
 }
