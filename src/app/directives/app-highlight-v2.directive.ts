@@ -8,7 +8,7 @@ export class AppHighlightV2Directive {
   defaultBgColor: string = 'transparent';
   defaultFontColor: string = 'black'
 
-  @Input() defaultHighlightFontColor: strgiting = 'white';
+  @Input() defaultHighlightFontColor: string = 'white';
   @Input() defaultHighlightBgColor: string = '#5BFF00';
 
   @HostBinding('style.color') color: string = this.defaultFontColor
